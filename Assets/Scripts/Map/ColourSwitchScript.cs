@@ -30,7 +30,8 @@ public class ColourSwitchScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        //tempcode. Remove later. 
+        if (Input.GetKeyDown(KeyCode.Q))
             SwtichColour(); 
     }
 
@@ -52,6 +53,8 @@ public class ColourSwitchScript : MonoBehaviour
 
         WhiteCollider.gameObject.SetActive(false);
         BlackCollider.gameObject.SetActive(true);
+
+        GameManager.instance.Player.GetComponentInChildren<Camera>().backgroundColor = Color.black; 
     }
     void SetWhite()
     {
@@ -60,5 +63,8 @@ public class ColourSwitchScript : MonoBehaviour
 
         WhiteCollider.gameObject.SetActive(true);
         BlackCollider.gameObject.SetActive(false);
+
+        GameManager.instance.Player.GetComponentInChildren<Camera>().backgroundColor = Color.white;
+
     }
 }
