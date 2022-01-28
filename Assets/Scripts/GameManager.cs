@@ -16,6 +16,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //only one GameManager allowed. 
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+            return; 
+        }
+
         instance = this;
         StartCoroutine(StartNewGame()); 
     }
@@ -23,8 +30,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            ChangeScene("testing"); 
+        
     }
 
     private void Awake()
@@ -33,9 +39,11 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void ChangeScene(string sceneName)
+    public void ChangeScene(string sceneName, Vector3 playerPos)
     {
         SceneManager.LoadScene(sceneName);  
+        Player.transform.position = playerPos;
+
     }
 
 

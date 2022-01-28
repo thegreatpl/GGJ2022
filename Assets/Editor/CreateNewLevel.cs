@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -26,5 +28,20 @@ public class CreateNewLevel : MonoBehaviour
         var gmpre = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/GameManager.prefab");
 
         PrefabUtility.InstantiatePrefab(gmpre);
+    }
+
+    [MenuItem("LevelEditing/CompileScenes")]
+    public static void AddAllScenesToBuildSettings()
+    {
+        List<EditorBuildSettingsScene> editorBuildSettingsScenes = new List<EditorBuildSettingsScene>();
+
+        var files = Directory.GetFiles("Assets/Scenes").Where(x => Path.GetExtension(x) == ".unity").ToList();
+
+        var scenes =  AssetDatabase.LoadAllAssetsAtPath("Assets/Scenes"); 
+        foreach (var scen in files)
+        {
+            editorBuildSettingsScenes.Add(new EditorBuildSettingsScene(scen, true));
+        }
+        EditorBuildSettings.scenes = editorBuildSettingsScenes.ToArray();
     }
 }
