@@ -11,15 +11,20 @@ public enum Direction
     Right
 }
 
+[RequireComponent(typeof(Attributes))]
 public class Movement : MonoBehaviour
 {
-    public float WalkingSpeed = 1f; 
+
+    public Attributes Attributes; 
+
+    public float WalkingSpeed { get { return Attributes.Speed; } }
 
     public Direction MovementDirection; 
 
     // Start is called before the first frame update
     void Start()
     {
+        Attributes = GetComponent<Attributes>();
         MovementDirection = Direction.None; 
     }
 

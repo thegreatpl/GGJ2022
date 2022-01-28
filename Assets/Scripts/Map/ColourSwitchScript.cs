@@ -38,9 +38,9 @@ public class ColourSwitchScript : MonoBehaviour
     public void SwtichColour()
     {
         if (IsBlack)
-            SetBlack();
-        else
             SetWhite();
+        else
+            SetBlack();
 
         IsBlack = !IsBlack; 
     }

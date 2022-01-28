@@ -53,4 +53,11 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(Player); 
         yield return null;
     }
+
+
+
+    public void GameOver()
+    {
+        //todo; game over screen. 
+    }
 }
