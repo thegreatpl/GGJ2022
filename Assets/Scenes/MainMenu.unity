@@ -200,6 +200,14 @@ PrefabInstance:
       propertyPath: FadeSpeed
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1124140890322201373, guid: 60f40b8e836b8bc458b13900a83b11f6, type: 3}
+      propertyPath: songs.Array.data[0].AudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cce4a82497c7ff04aa8aeaab78528d6b, type: 3}
+    - target: {fileID: 1124140890322201373, guid: 60f40b8e836b8bc458b13900a83b11f6, type: 3}
+      propertyPath: songs.Array.data[1].AudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 090f491cdb56fb1469fa7f58ad56336a, type: 3}
     - target: {fileID: 2760970780401651077, guid: 60f40b8e836b8bc458b13900a83b11f6, type: 3}
       propertyPath: m_RootOrder
       value: 3
