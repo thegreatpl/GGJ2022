@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 821912641}
   - component: {fileID: 821912638}
   - component: {fileID: 5902043016541124490}
+  - component: {fileID: -7105730970048865540}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c27fc9511c6c75f4ebcb69e29e6a74c5, type: 3}
+  m_Sprite: {fileID: 5930977686479836914, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Attributes: {fileID: 0}
+  SpriteAnimator: {fileID: 0}
   MovementDirection: 0
 --- !u!50 &821912641
 Rigidbody2D:
@@ -178,6 +180,68 @@ MonoBehaviour:
   MaxHP: 10
   Speed: 3
   Attack: 0
+--- !u!114 &-7105730970048865540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8827438200776315725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2374c92afa1cee49a5f84bd460b0acb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationRate: 20
+  CurrentAnimation: 
+  InspectorAnimations:
+  - name: walkup
+    sprites:
+    - {fileID: 2471558651646962808, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -2011999922094507554, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 7031563825418386088, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 5988344073391138597, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 1447173941041060051, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -6169181856508187690, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -4511179172770678908, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -7912277746492616272, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -1362222124042256768, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+  - name: walkdown
+    sprites:
+    - {fileID: -163343441337549812, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 8523485602307624409, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 2086095946321276190, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 8491606741480953529, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 7303085226931734952, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -2524484962994966061, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 3567611041368320301, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -4702146155501040627, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 1631448904003162964, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+  - name: walkleft
+    sprites:
+    - {fileID: -2370772753604736555, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 230860966591314142, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 1292437683418593087, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -8523412941277509557, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 2088859073705272399, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -6351510947425579859, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -7798971430663429562, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 914935942066655033, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -7264661006643756161, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+  - name: walkright
+    sprites:
+    - {fileID: -8464004796151471140, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 6845636851178158710, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 2302356707012293880, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 1854862029521862642, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 404416529257211335, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -7480990905142516124, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 4371277551633252803, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: -209652613280689741, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+    - {fileID: 4306599609337924158, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
+  - name: idle
+    sprites:
+    - {fileID: -163343441337549812, guid: 861fc6e8d249b0744a71f23cdc824837, type: 3}
 --- !u!1 &8843628775549548640
 GameObject:
   m_ObjectHideFlags: 0
