@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/wolves.unity
+    guid: f9adc4541dd34c94baf1f69b936f42ca
   m_configObjects: {}
