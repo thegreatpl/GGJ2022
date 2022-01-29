@@ -9,13 +9,13 @@ public class GameManager : MonoBehaviour
 
     public GameObject PlayerPrefab;
 
-    public GameObject GameUIPrefab; 
+    public GameObject GameUIPrefab;
 
-    public List<GameObject> GibsPrefabs; 
+    public List<GameObject> GibsPrefabs;
 
 
 
-    public GameObject Player; 
+    public GameObject Player;
 
     public GameUIScript GameUIScript;
 
@@ -28,32 +28,50 @@ public class GameManager : MonoBehaviour
         if (instance != null)
         {
             Destroy(this.gameObject);
-            return; 
+            return;
         }
 
         instance = this;
-        StartCoroutine(StartNewGame()); 
+
+        //debug code. 
+        if (SceneManager.GetActiveScene().name != "MainMenu" && Application.isEditor)
+            StartCoroutine(StartNewGame()); 
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject); 
+        DontDestroyOnLoad(gameObject);
     }
 
 
     public void ChangeScene(string sceneName, Vector3 playerPos)
     {
-        SceneManager.LoadScene(sceneName);  
+        SceneManager.LoadScene(sceneName);
         Player.transform.position = playerPos;
 
     }
 
+    #region MenuOptions
+
+    public void StartGame()
+    {
+        StartCoroutine(StartNewGame());
+    }
+
+    public void QuitGame() 
+    { 
+        Application.Quit();
+    }
+
+
+    #endregion
 
     public IEnumerator StartNewGame()
     {
@@ -64,6 +82,9 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad (gameUI);
         GameUIScript = gameUI.GetComponent<GameUIScript>();
         yield return null;
+
+        if (SceneManager.GetActiveScene().name == "MainMenu" || !Application.isEditor)
+            ChangeScene("Level_1", Vector3.zero); 
     }
 
 
