@@ -18,7 +18,7 @@ public class PlayerMovementScript : BaseEntityController
         Attributes.onDeath += () =>
         {
             Gibsify();
-            transform.DetachChildren();             
+            transform.DetachChildren();
             Destroy(gameObject);
             GameManager.instance.GameOver();
 

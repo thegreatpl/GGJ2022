@@ -436,7 +436,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Insert Game Title Here
+  m_Text: Laboryrinth
 --- !u!222 &1075075823
 CanvasRenderer:
   m_ObjectHideFlags: 0

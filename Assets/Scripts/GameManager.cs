@@ -60,6 +60,12 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene(string sceneName, Vector3 playerPos)
     {
+        if (sceneName == "victory")
+        {
+            WinGame(); 
+            return; 
+        }
+
         SceneManager.LoadScene(sceneName);
         Player.transform.position = playerPos;
 
@@ -84,7 +90,9 @@ public class GameManager : MonoBehaviour
     {
         Player = Instantiate(PlayerPrefab);
         DontDestroyOnLoad(Player); 
-        Camera.transform.SetParent(Player.transform, false);
+        Camera.transform.position = new Vector3(0, 0, Camera.transform.position.z);
+        Camera.transform.SetParent(Player.transform, true);
+        
         yield return null;
         var gameUI = Instantiate(GameUIPrefab);
         DontDestroyOnLoad (gameUI);
@@ -99,17 +107,24 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        StartCoroutine(GameUIScript.GetComponentInChildren<GameOverScreenScript>().FadeToBlack()); 
-        //todo; game over screen. 
-        //Destroy(GameUIScript.gameObject);
+        StartCoroutine(GameUIScript.GetComponentInChildren<GameOverScreenScript>().FadeToBlack(false)); 
+
+    }
+
+    public void WinGame()
+    {
+        StartCoroutine(GameUIScript.GetComponentInChildren<GameOverScreenScript>().FadeToBlack(true));
+        Player.transform.DetachChildren();
+        Destroy(Player.gameObject);
     }
 
     public void GoToMenu()
     {
+        StopAllCoroutines(); 
         Destroy(GameUIScript.gameObject);
         if (Player != null)
             Destroy(Player);
-       Camera.transform.position = new Vector3(-3, 0, Camera.transform.position.z); 
+       Camera.transform.position = new Vector3(0, 0, Camera.transform.position.z); 
         SceneManager.LoadScene("MainMenu");
 
     }
