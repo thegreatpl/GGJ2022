@@ -38,9 +38,15 @@ public class ColourSwitchScript : MonoBehaviour
     public void SwtichColour()
     {
         if (IsBlack)
-            SetWhite();
+        {
+            if (WhiteCollider.GetTile(WhiteCollider.WorldToCell(GameManager.instance.Player.transform.position)) == null)
+                SetWhite();
+        }
         else
-            SetBlack();
+        {
+            if (BlackCollider.GetTile(BlackCollider.WorldToCell(GameManager.instance.Player.transform.position)) == null)
+                SetBlack();
+        }
 
         IsBlack = !IsBlack; 
     }
