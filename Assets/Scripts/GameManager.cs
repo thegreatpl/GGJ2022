@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     public Camera Camera;
 
-
+    public MusicPlayer MusicPlayer; 
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
         }
 
         instance = this;
+
+
+        MusicPlayer = gameObject.GetComponent<MusicPlayer>();
 
         //debug code. 
         if (SceneManager.GetActiveScene().name != "MainMenu" && Application.isEditor)

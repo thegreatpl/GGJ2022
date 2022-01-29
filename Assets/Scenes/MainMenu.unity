@@ -196,6 +196,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1124140890322201373, guid: 60f40b8e836b8bc458b13900a83b11f6, type: 3}
+      propertyPath: FadeSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 2760970780401651077, guid: 60f40b8e836b8bc458b13900a83b11f6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -244,6 +248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5908408001312363882, guid: 60f40b8e836b8bc458b13900a83b11f6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 090f491cdb56fb1469fa7f58ad56336a, type: 3}
     - target: {fileID: 6221353752891606134, guid: 60f40b8e836b8bc458b13900a83b11f6, type: 3}
       propertyPath: m_ClearFlags
       value: 2
@@ -1228,6 +1236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3888307243359634060}
+  - component: {fileID: 3888307243359634062}
   m_Layer: 0
   m_Name: LevelObject
   m_TagString: Untagged
@@ -1235,6 +1244,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3888307243359634062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3888307243359634061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f956c4ff714594ea2b4f39b94e5f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Music: DissonantWaltz
 --- !u!4 &3888307243724027560
 Transform:
   m_ObjectHideFlags: 0
