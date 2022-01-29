@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: {fileID: 0}
+  Attributes: {fileID: 0}
 --- !u!114 &8827438200776315722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &5902043016541124490
 MonoBehaviour:
@@ -180,6 +181,8 @@ MonoBehaviour:
   MaxHP: 10
   Speed: 3
   Attack: 0
+  AttackDistance: 0
+  AttackSpeed: 0
 --- !u!114 &-7105730970048865540
 MonoBehaviour:
   m_ObjectHideFlags: 0
