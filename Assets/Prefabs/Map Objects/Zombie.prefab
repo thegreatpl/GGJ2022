@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2374c92afa1cee49a5f84bd460b0acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationRate: 20
+  AnimationRate: 0.08
   CurrentAnimation: 
   InspectorAnimations:
   - name: walkup
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d7aa7112e1db443a98d635e607cbf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 0}
-  attributes: {fileID: 0}
+  Movement: {fileID: 0}
+  Attributes: {fileID: 0}
   DetectionDistance: 5
   Target: {fileID: 0}

@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2374c92afa1cee49a5f84bd460b0acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationRate: 10
+  AnimationRate: 0.01
   CurrentAnimation: 
   InspectorAnimations:
   - name: buzz

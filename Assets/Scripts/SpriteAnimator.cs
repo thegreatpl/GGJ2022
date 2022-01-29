@@ -16,14 +16,14 @@ public class SpriteAnimator : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
 
-    int count = 0;
+    float count = 0;
 
     int frame = 0;
 
     /// <summary>
     /// How fast this animates. 
     /// </summary>
-    public int AnimationRate = 10;
+    public float AnimationRate = 0.1f;
 
     /// <summary>
     /// The current Animation of this object. 
@@ -64,7 +64,7 @@ public class SpriteAnimator : MonoBehaviour
             count = 0;
         }
 
-        count++;
+        count += 1 * Time.deltaTime;
     }
 
 
