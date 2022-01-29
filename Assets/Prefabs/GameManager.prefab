@@ -56,6 +56,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   GameUIScript: {fileID: 0}
   Camera: {fileID: 6221353752891606134}
+  MusicPlayer: {fileID: 0}
 --- !u!82 &5908408001312363882
 AudioSource:
   m_ObjectHideFlags: 0
@@ -165,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeSpeed: 0.1
+  CurrentSong: 
   songs:
   - AudioClip: {fileID: 8300000, guid: 506075c1978ff814bb12375a1dd07572, type: 3}
     Name: Industria

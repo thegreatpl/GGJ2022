@@ -57,7 +57,7 @@ public class BaseAI : BaseEntityController
         if (_wanderTarget == null)
         {
             if (Random.Range(0, 100) < 5) //25% chance to walking there. 
-                _wanderTarget = new Vector3(transform.position.x + Random.Range(-range, range), transform.position.x + Random.Range(-range, range));
+                _wanderTarget = new Vector3(transform.position.x + Random.Range(-range, range), transform.position.y + Random.Range(-range, range));
             
             return;
         }

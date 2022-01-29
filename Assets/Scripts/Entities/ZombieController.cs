@@ -38,7 +38,9 @@ public class ZombieController : BaseAI
 
             var entities = Physics2D.OverlapCircleAll(transform.position, DetectionDistance);
             Target = entities.FirstOrDefault(x => x.gameObject.tag == "Player")?.GetComponent<Attributes>();
-            if (Target == null)
+            if (Target == null && Waypoints.Length > 0)
+                MoveWaypoints(); 
+            else
                 DumbWander(); 
         }
 
