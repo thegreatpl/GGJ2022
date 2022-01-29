@@ -9,9 +9,13 @@ public class GameManager : MonoBehaviour
 
     public GameObject PlayerPrefab;
 
+    public GameObject GameUIPrefab; 
+
 
 
     public GameObject Player; 
+
+    public GameUIScript GameUIScript;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +56,10 @@ public class GameManager : MonoBehaviour
         Player = Instantiate(PlayerPrefab);
         DontDestroyOnLoad(Player); 
         yield return null;
+        var gameUI = Instantiate(GameUIPrefab);
+        DontDestroyOnLoad (gameUI);
+        GameUIScript = gameUI.GetComponent<GameUIScript>();
+        yield return null;
     }
 
 
@@ -59,5 +67,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         //todo; game over screen. 
+        Destroy(GameUIScript.gameObject);
     }
 }
