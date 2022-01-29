@@ -31,7 +31,7 @@ public class ColourSwitchScript : MonoBehaviour
     void Update()
     {
         //tempcode. Remove later. 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetButtonDown("Switch"))
             SwtichColour(); 
     }
 
