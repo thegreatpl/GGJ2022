@@ -16,7 +16,7 @@ public class MusicPlayer : MonoBehaviour
 
     AudioSource audioSource;
 
-    public float FadeSpeed = 0.001f;
+    public float FadeSpeed = 0.1f;
 
     public string CurrentSong; 
 
@@ -50,14 +50,14 @@ public class MusicPlayer : MonoBehaviour
         while (audioSource.volume > 0)
         {
             audioSource.volume -= FadeSpeed;
-            yield return null;
+            yield return new WaitForSeconds(0.5f);
         }
         audioSource.clip = songsDictionary[nextSong]; 
         audioSource.Play();
         while (audioSource.volume < volume)
         {
             audioSource.volume += FadeSpeed;
-            yield return null;
+            yield return new WaitForSeconds(0.5f);
         }
         audioSource.volume = volume;
     }
