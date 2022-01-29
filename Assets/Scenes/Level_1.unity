@@ -132,15 +132,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2104682687598046345, guid: b74fe75c0354ac145ad66f10c89da22b, type: 3}
       propertyPath: Level
-      value: corridors
+      value: Level_2
       objectReference: {fileID: 0}
     - target: {fileID: 2104682687598046345, guid: b74fe75c0354ac145ad66f10c89da22b, type: 3}
       propertyPath: Location.x
-      value: -29.5
+      value: -16.5
       objectReference: {fileID: 0}
     - target: {fileID: 2104682687598046345, guid: b74fe75c0354ac145ad66f10c89da22b, type: 3}
       propertyPath: Location.y
-      value: 30.5
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 2104682687598046347, guid: b74fe75c0354ac145ad66f10c89da22b, type: 3}
       propertyPath: m_RootOrder
