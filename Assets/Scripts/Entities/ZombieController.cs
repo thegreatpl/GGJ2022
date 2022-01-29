@@ -37,7 +37,9 @@ public class ZombieController : BaseAI
             Movement.MovementDirection = Direction.None;
 
             var entities = Physics2D.OverlapCircleAll(transform.position, DetectionDistance);
-            Target = entities.FirstOrDefault(x => x.gameObject.tag == "Player")?.GetComponent<Attributes>(); 
+            Target = entities.FirstOrDefault(x => x.gameObject.tag == "Player")?.GetComponent<Attributes>();
+            if (Target == null)
+                DumbWander(); 
         }
 
         if (Target != null)
