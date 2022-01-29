@@ -60,7 +60,7 @@ public class ColourSwitchScript : MonoBehaviour
         WhiteCollider.gameObject.SetActive(false);
         BlackCollider.gameObject.SetActive(true);
 
-        GameManager.instance.Player.GetComponentInChildren<Camera>().backgroundColor = Color.black; 
+        GameManager.instance.Camera.backgroundColor = Color.black; 
     }
     void SetWhite()
     {
@@ -70,7 +70,7 @@ public class ColourSwitchScript : MonoBehaviour
         WhiteCollider.gameObject.SetActive(true);
         BlackCollider.gameObject.SetActive(false);
 
-        GameManager.instance.Player.GetComponentInChildren<Camera>().backgroundColor = Color.white;
+        GameManager.instance.Camera.backgroundColor = Color.white;
 
     }
 }

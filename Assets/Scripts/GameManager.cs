@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     public GameUIScript GameUIScript;
 
+    public Camera Camera;
+
 
 
     // Start is called before the first frame update
@@ -77,6 +79,7 @@ public class GameManager : MonoBehaviour
     {
         Player = Instantiate(PlayerPrefab);
         DontDestroyOnLoad(Player); 
+        Camera.transform.SetParent(Player.transform, false);
         yield return null;
         var gameUI = Instantiate(GameUIPrefab);
         DontDestroyOnLoad (gameUI);
@@ -91,7 +94,18 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        StartCoroutine(GameUIScript.GetComponentInChildren<GameOverScreenScript>().FadeToBlack()); 
         //todo; game over screen. 
+        //Destroy(GameUIScript.gameObject);
+    }
+
+    public void GoToMenu()
+    {
         Destroy(GameUIScript.gameObject);
+        if (Player != null)
+            Destroy(Player);
+        
+        SceneManager.LoadScene("MainMenu");
+
     }
 }
