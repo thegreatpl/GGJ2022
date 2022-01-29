@@ -43,5 +43,6 @@ public class CreateNewLevel : MonoBehaviour
             editorBuildSettingsScenes.Add(new EditorBuildSettingsScene(scen, true));
         }
         EditorBuildSettings.scenes = editorBuildSettingsScenes.ToArray();
+       
     }
 }

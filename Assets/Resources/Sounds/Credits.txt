@@ -1,1 +1,3 @@
 MonsterSoundTutorial: https://opengameart.org/content/monster-sound-tutorial
+
+fan noise: https://opengameart.org/content/13-ambient-machine-sounds
