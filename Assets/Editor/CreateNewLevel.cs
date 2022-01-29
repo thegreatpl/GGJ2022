@@ -37,12 +37,16 @@ public class CreateNewLevel : MonoBehaviour
 
         var files = Directory.GetFiles("Assets/Scenes").Where(x => Path.GetExtension(x) == ".unity").ToList();
 
-        var scenes =  AssetDatabase.LoadAllAssetsAtPath("Assets/Scenes"); 
+        var menu = files.FirstOrDefault(x => Path.GetFileName(x) == "MainMenu.unity"); 
+        editorBuildSettingsScenes.Add(new EditorBuildSettingsScene(menu, true));
+        files.Remove(menu);
+
+
         foreach (var scen in files)
         {
             editorBuildSettingsScenes.Add(new EditorBuildSettingsScene(scen, true));
         }
         EditorBuildSettings.scenes = editorBuildSettingsScenes.ToArray();
-       
+
     }
 }

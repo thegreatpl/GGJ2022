@@ -308,7 +308,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -839,7 +839,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1217,7 +1217,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1408,11 +1408,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6450437611261728935, guid: 304e0c603a49c474e953ff2635b4ba1b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.44
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 6450437611261728935, guid: 304e0c603a49c474e953ff2635b4ba1b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.31
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 6450437611261728935, guid: 304e0c603a49c474e953ff2635b4ba1b, type: 3}
       propertyPath: m_LocalPosition.z
