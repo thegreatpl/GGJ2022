@@ -11,11 +11,15 @@ public class GameManager : MonoBehaviour
 
     public GameObject GameUIPrefab; 
 
+    public List<GameObject> GibsPrefabs; 
+
 
 
     public GameObject Player; 
 
     public GameUIScript GameUIScript;
+
+
 
     // Start is called before the first frame update
     void Start()

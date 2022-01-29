@@ -44,3 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerPrefab: {fileID: 8827438200776315725, guid: 9167b87f99b6a1b49b7d9726b2583379, type: 3}
+  GameUIPrefab: {fileID: 4524934690053896681, guid: 35477927571327e4db0b67157a0b5150, type: 3}
+  GibsPrefabs:
+  - {fileID: 3408193272053485876, guid: 9a4ed19bfeda43943bfe20a875ced8ed, type: 3}
+  - {fileID: 4788168174448726014, guid: 4ee1e1969354d9241ae36af9a19bb047, type: 3}
+  - {fileID: 4788168174448726014, guid: c4eeff8c9fff29b4794a3f5c7533f825, type: 3}
+  - {fileID: 3408193272053485876, guid: 81c6d5ee5de87c24683cecd6de7e0d62, type: 3}
+  Player: {fileID: 0}
+  GameUIScript: {fileID: 0}

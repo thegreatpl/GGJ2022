@@ -5,10 +5,8 @@ using UnityEngine;
 
 [RequireComponent(typeof(Movement))]
 [RequireComponent(typeof(Attributes))]
-public class ZombieController : MonoBehaviour
+public class ZombieController : BaseEntityController
 {
-    public Movement movement;
-    public Attributes attributes;
 
 
     public float DetectionDistance = 5f;
@@ -21,11 +19,12 @@ public class ZombieController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movement = GetComponent<Movement>();
-        attributes = GetComponent<Attributes>();
+        Movement = GetComponent<Movement>();
+        Attributes = GetComponent<Attributes>();
 
-        attributes.onDeath += () =>
+        Attributes.onDeath += () =>
         {
+            Gibsify(); 
             Destroy(gameObject);
         }; 
     }
@@ -35,7 +34,7 @@ public class ZombieController : MonoBehaviour
     {
         if (Target == null)
         {
-            movement.MovementDirection = Direction.None;
+            Movement.MovementDirection = Direction.None;
 
             var entities = Physics2D.OverlapCircleAll(transform.position, DetectionDistance);
             Target = entities.FirstOrDefault(x => x.gameObject.tag == "Player")?.GetComponent<Attributes>(); 
@@ -59,11 +58,11 @@ public class ZombieController : MonoBehaviour
     void Attack()
     {
         if (Target != null 
-            && Vector3.Distance(transform.position, Target.transform.position) < attributes.AttackDistance
+            && Vector3.Distance(transform.position, Target.transform.position) < Attributes.AttackDistance
             && AttackCooldown < 0)
         {
-            Target.TakeDamage(attributes.Attack);
-            AttackCooldown = attributes.AttackSpeed; 
+            Target.TakeDamage(Attributes.Attack);
+            AttackCooldown = Attributes.AttackSpeed; 
         }
         AttackCooldown--; 
     }
@@ -76,19 +75,19 @@ public class ZombieController : MonoBehaviour
         {
             if (distance.x < 0)
             {
-                movement.MovementDirection = Direction.Left; 
+                Movement.MovementDirection = Direction.Left; 
             }
             else
-                movement.MovementDirection = Direction.Right;
+                Movement.MovementDirection = Direction.Right;
         }
         else
         {
             if (distance.y < 0)
             {
-                movement.MovementDirection = Direction.Down;
+                Movement.MovementDirection = Direction.Down;
             }
             else
-                movement.MovementDirection = Direction.Up;
+                Movement.MovementDirection = Direction.Up;
         }
     }
 }

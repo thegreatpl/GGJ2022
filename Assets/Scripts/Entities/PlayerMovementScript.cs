@@ -4,11 +4,9 @@ using UnityEngine;
 
 [RequireComponent(typeof(Movement))]
 [RequireComponent(typeof(Attributes))]
-public class PlayerMovementScript : MonoBehaviour
+public class PlayerMovementScript : BaseEntityController
 {
-    public Movement Movement;
 
-    public Attributes Attributes; 
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +17,11 @@ public class PlayerMovementScript : MonoBehaviour
 
         Attributes.onDeath += () =>
         {
-            GameManager.instance.GameOver();
+            Gibsify();
+            transform.DetachChildren();             
             Destroy(gameObject);
+            GameManager.instance.GameOver();
+
         }; 
     }
 
