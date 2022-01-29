@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 0
   MaxHP: 10
-  Speed: 3
+  Speed: 2.5
   Attack: 1
   AttackDistance: 1
   AttackSpeed: 100
@@ -244,5 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Movement: {fileID: 0}
   Attributes: {fileID: 0}
+  Waypoints: []
+  currentWaypoint: 0
   DetectionDistance: 5
   Target: {fileID: 0}

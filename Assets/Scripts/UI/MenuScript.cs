@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
+    
 
     public ColourSwitchScript colourSwitchScript;
     // Start is called before the first frame update
@@ -32,5 +34,15 @@ public class MenuScript : MonoBehaviour
             yield return new WaitForSeconds(3); 
         }
 
+    }
+
+    public void StartNewGame()
+    {
+        GameManager.instance.StartGame();
+    }
+
+    public void QuitGame()
+    {
+        GameManager.instance.QuitGame(); 
     }
 }

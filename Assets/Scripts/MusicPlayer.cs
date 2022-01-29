@@ -23,12 +23,16 @@ public class MusicPlayer : MonoBehaviour
     public List<Song> songs;
 
     Dictionary<string, AudioClip> songsDictionary = new Dictionary<string, AudioClip>();
+
+    public float MaxVolume; 
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         foreach (Song s in songs)
             songsDictionary.Add(s.Name, s.AudioClip);
+
+        MaxVolume = audioSource.volume;
     }
 
     // Update is called once per frame
@@ -40,13 +44,17 @@ public class MusicPlayer : MonoBehaviour
     public void ChangeSong(string newSong)
     {
         if (songsDictionary.ContainsKey(newSong) && newSong != CurrentSong)
+        {
+            StopCoroutine(TransitionSongs(CurrentSong)); 
             StartCoroutine(TransitionSongs(newSong));
+        }
     }
 
 
     IEnumerator TransitionSongs(string nextSong)
     {
-        var volume = audioSource.volume; 
+        CurrentSong = nextSong; 
+         
         while (audioSource.volume > 0)
         {
             audioSource.volume -= FadeSpeed;
@@ -54,11 +62,11 @@ public class MusicPlayer : MonoBehaviour
         }
         audioSource.clip = songsDictionary[nextSong]; 
         audioSource.Play();
-        while (audioSource.volume < volume)
+        while (audioSource.volume < MaxVolume)
         {
             audioSource.volume += FadeSpeed;
             yield return new WaitForSeconds(0.5f);
         }
-        audioSource.volume = volume;
+        audioSource.volume = MaxVolume;
     }
 }

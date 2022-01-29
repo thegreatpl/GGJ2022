@@ -258,17 +258,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60f40b8e836b8bc458b13900a83b11f6, type: 3}
---- !u!114 &628936587 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2760970780401651078, guid: 60f40b8e836b8bc458b13900a83b11f6, type: 3}
-  m_PrefabInstance: {fileID: 628936586}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb7f88908b11334d8ca1d01cd477d42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &903093280
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,9 +520,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 628936587}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 1789036174}
+        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+        m_MethodName: StartNewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -664,8 +653,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 628936587}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1789036174}
+        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:

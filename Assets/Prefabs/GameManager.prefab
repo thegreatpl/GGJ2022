@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeSpeed: 0.1
-  CurrentSong: 
+  CurrentSong: DissonantWaltz
   songs:
   - AudioClip: {fileID: 8300000, guid: 506075c1978ff814bb12375a1dd07572, type: 3}
     Name: Industria
