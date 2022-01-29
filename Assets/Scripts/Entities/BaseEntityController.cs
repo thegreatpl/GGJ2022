@@ -34,6 +34,7 @@ public class BaseEntityController : MonoBehaviour
 
     protected void Gibsify()
     {
+        Instantiate(GameManager.instance.GibsSound, transform.position, Quaternion.identity);
         for(int idx = 0; idx < Random.Range(3, 10); idx++)
         {
             var gib = Instantiate(GameManager.instance.GibsPrefabs.RandomElement()); 

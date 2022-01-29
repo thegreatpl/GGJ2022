@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> GibsPrefabs;
 
+    public GameObject GibsSound; 
+
 
 
     public GameObject Player;

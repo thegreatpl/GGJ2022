@@ -53,6 +53,7 @@ MonoBehaviour:
   - {fileID: 4788168174448726014, guid: 4ee1e1969354d9241ae36af9a19bb047, type: 3}
   - {fileID: 4788168174448726014, guid: c4eeff8c9fff29b4794a3f5c7533f825, type: 3}
   - {fileID: 3408193272053485876, guid: 81c6d5ee5de87c24683cecd6de7e0d62, type: 3}
+  GibsSound: {fileID: 6765015853844050544, guid: 505a6d0c7dfce994686c01ac7de5851a, type: 3}
   Player: {fileID: 0}
   GameUIScript: {fileID: 0}
   Camera: {fileID: 6221353752891606134}
@@ -172,6 +173,7 @@ MonoBehaviour:
     Name: Industria
   - AudioClip: {fileID: 8300000, guid: 090f491cdb56fb1469fa7f58ad56336a, type: 3}
     Name: DissonantWaltz
+  MaxVolume: 0
 --- !u!1 &3286016466933945502
 GameObject:
   m_ObjectHideFlags: 0
