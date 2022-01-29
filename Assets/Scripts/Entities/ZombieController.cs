@@ -5,7 +5,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Movement))]
 [RequireComponent(typeof(Attributes))]
-public class ZombieController : BaseEntityController
+public class ZombieController : BaseAI
 {
 
 
@@ -67,27 +67,5 @@ public class ZombieController : BaseEntityController
         AttackCooldown--; 
     }
 
-    void DumbMoveToPosition(Vector3 targetPos)
-    {
-        var distance = targetPos - transform.position;
-
-        if (Mathf.Abs(distance.x) > Mathf.Abs(distance.y))
-        {
-            if (distance.x < 0)
-            {
-                Movement.MovementDirection = Direction.Left; 
-            }
-            else
-                Movement.MovementDirection = Direction.Right;
-        }
-        else
-        {
-            if (distance.y < 0)
-            {
-                Movement.MovementDirection = Direction.Down;
-            }
-            else
-                Movement.MovementDirection = Direction.Up;
-        }
-    }
+   
 }

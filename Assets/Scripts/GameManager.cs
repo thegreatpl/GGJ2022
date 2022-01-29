@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
         Destroy(GameUIScript.gameObject);
         if (Player != null)
             Destroy(Player);
-        
+       Camera.transform.position = new Vector3(-3, 0, Camera.transform.position.z); 
         SceneManager.LoadScene("MainMenu");
 
     }
