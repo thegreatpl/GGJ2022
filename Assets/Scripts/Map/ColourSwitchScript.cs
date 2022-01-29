@@ -51,7 +51,7 @@ public class ColourSwitchScript : MonoBehaviour
         IsBlack = !IsBlack; 
     }
 
-    void SetBlack()
+    public void SetBlack()
     {
         BackGround.color = BlackColor;
         BlackCollider.color = BlackColor;
@@ -62,7 +62,7 @@ public class ColourSwitchScript : MonoBehaviour
 
         GameManager.instance.Camera.backgroundColor = Color.black; 
     }
-    void SetWhite()
+    public void SetWhite()
     {
         BackGround.color = Color.white;
         AlwaysCollider.color = Color.white;
