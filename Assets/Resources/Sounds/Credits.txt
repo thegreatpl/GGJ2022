@@ -3,3 +3,5 @@ MonsterSoundTutorial: https://opengameart.org/content/monster-sound-tutorial
 fan noise: https://opengameart.org/content/13-ambient-machine-sounds
 bone crunch: https://freesound.org/people/Clearwavsound/
 splattt: https://freesound.org/people/SlykMrByches/
+Zombie sound: https://opengameart.org/content/zombie-pain
+werewolf growl: https://opengameart.org/content/6-monstrous-growls
