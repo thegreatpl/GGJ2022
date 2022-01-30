@@ -5,19 +5,30 @@ using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
-    
+
+    public GameObject CreditsPanelObject;
+
+    public GameObject MenuObj; 
+
+
 
     public ColourSwitchScript colourSwitchScript;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(ToggleColour()); 
+        CreditsPanelObject.SetActive(false);
+        MenuObj.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (CreditsPanelObject.activeSelf && Input.anyKeyDown)
+        {
+            CreditsPanelObject.SetActive(false);
+            MenuObj.SetActive(true);
+        }
     }
 
     IEnumerator ToggleColour()
@@ -44,5 +55,12 @@ public class MenuScript : MonoBehaviour
     public void QuitGame()
     {
         GameManager.instance.QuitGame(); 
+    }
+
+
+    public void ShowCredits()
+    {
+        CreditsPanelObject.SetActive(true);
+        MenuObj?.SetActive(false);
     }
 }
